@@ -1,0 +1,54 @@
+.option:hover { border-color: #e94560; }
+        .option.selected { border-color: #e94560; background: #1a4d6e; }
+        .option-header { display: flex; justify-content: space-between; align-items: center; }
+        .weight { font-size: 18px; font-weight: bold; }
+        .price { font-size: 20px; color: #4ecca3; font-weight: bold; }
+        .price-per-g { font-size: 12px; color: #aaa; margin-top: 5px; }
+        .buy-btn { width: 100%; padding: 18px; background: #e94560; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: transform 0.2s; }
+        .buy-btn:hover { transform: scale(1.02); }
+        .buy-btn:disabled { background: #555; cursor: not-allowed; transform: none; }
+        .total { text-align: center; margin-top: 20px; font-size: 14px; color: #aaa; }
+    
+
+
+    <div class="container">
+        <h1>🛒 Work Store</h1>
+        
+        <div class="product">
+            <div class="product-name">Work</div>
+            <p style="color: #aaa; margin-bottom: 15px;">Seleziona la quantità:</p>
+            
+            <div class="option" id="opt-0">
+                <div class="option-header">
+                    <span class="weight">100g</span>
+                    <span class="price">340€</span>
+                </div>
+                <div class="price-per-g">3,40€/g</div>
+            </div>
+            
+            <div class="option" id="opt-1">
+                <div class="option-header">
+                    <span class="weight">500g</span>
+                    <span class="price">1.450€</span>
+                </div>
+                <div class="price-per-g">2,90€/g</div>
+            </div>
+            
+            <div class="option" id="opt-2">
+                <div class="option-header">
+                    <span class="weight">1000g (1kg)</span>
+                    <span class="price">2.750€</span>
+                </div>
+                <div class="price-per-g">2,75€/g</div>
+            </div>
+        </div>
+        
+        <div class="total" id="total-box" style="display: none;">
+            Hai selezionato: <strong id="selected-weight">-</strong> per <strong id="selected-price" style="color: #4ecca3;">-</strong>
+        </div>
+        
+        <button class="buy-btn" disabled="" id="buy-btn">Seleziona una quantità</button>
+    </div>
+
+    
+
